@@ -1,0 +1,136 @@
+/* Start SCSS Modules*/
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/*End of SCSS Modules*/
+/***** Variables *****/
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  color: #353535;
+  margin: 0;
+}
+
+h1 {
+  font-size: 72px;
+}
+
+h2 {
+  font-size: 63px;
+}
+
+h3 {
+  font-size: 54px;
+}
+
+h4 {
+  font-size: 36px;
+}
+
+.test-blue {
+  color: #2462e9;
+}
+
+.test-primary {
+  color: #2462e9;
+}
+
+/******* Nesting **********/
+/*
+  decendant selector
+  selector1{
+    selector2{
+                        
+    }
+  }
+  
+  child selector
+  selector1{
+    > selector2{
+                        
+    }
+  }
+
+  sibling selector
+  selector1{
+    + selector2{
+                        
+    }
+  }
+  sibling selector
+  selector1{
+    ~ selector2{
+                        
+    }
+  }
+
+  parent selector &
+
+  selector1{
+    & + &{
+                        
+    }
+    &:hover{
+    }
+  }
+*/
+.nav {
+  height: 60px;
+  background-color: #f1f1f1;
+}
+
+.nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav ul a {
+  display: block;
+  text-decoration: none;
+  color: #353535;
+  background-color: #f1f1f1;
+  line-height: 60px;
+  padding: 0 16px;
+}
+
+.nav ul a:hover {
+  background-color: #ca1d1d;
+  color: #f1f1f1;
+}
+
+.nav > ul > li {
+  float: left;
+}
+
+h2 + p {
+  border-top: 1px solid gray;
+}
+
+p ~ span {
+  opacity: 0.8;
+}
+
+p ~ a {
+  color: gainsboro;
+}
+
+/************/
+p ~ span {
+  opacity: 0.8;
+}
+
+p ~ a {
+  color: gainsboro;
+}
+
+.card-link {
+  background-color: #fff;
+}
+
+.card-link + .card-link {
+  margin-left: 10px;
+}
+/*# sourceMappingURL=style.css.map */
