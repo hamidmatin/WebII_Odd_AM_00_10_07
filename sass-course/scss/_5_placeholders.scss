@@ -2,7 +2,7 @@
 
 // .btn{
 //   display: inline-block;
-//   padding: 8ps 16px;
+//   padding: 8px 16px;
 //   // border-radius: 6px;
 // }
 // .card{
@@ -27,14 +27,17 @@
 %rounded-corner {
   border-radius: 6px;
 }
+
 .shadow {
   box-shadow: 0 2px 4px 2px rgba(0, 0, 0, 0.445);
 }
+
 .btn {
   display: inline-block;
-  padding: 8ps 16px;
+  padding: 8px 16px;
   @extend %rounded-corner;
 }
+
 .card {
   padding: 0.5em;
   @extend %rounded-corner;
@@ -43,9 +46,11 @@
 
 .alert {
   padding: 1em;
-  @extend %rounded-corner;
-  @extend .shadow;
+  // @extend %rounded-corner;
+  // @extend .shadow;
+  @extend %rounded-corner, .shadow;
 }
+
 /******************/
 %toolbelt {
   box-sizing: border-box;
@@ -64,17 +69,17 @@
 }
 
 .action-buttons {
-  @extend %toolbelt;
   color: #4285f4;
+  @extend %toolbelt;
 }
 
 .reset-buttons {
-  @extend %toolbelt;
   color: #cddc39;
+  @extend %toolbelt;
 }
 .cancel-button {
-  @extend %toolbelt;
   color: #555;
+  @extend %toolbelt;
 }
 /******************/
 .class {
@@ -112,17 +117,16 @@ p.info {
     border: 1px solid rgba(#000, 0.8);
     border-radius: 2px;
   }
-}  
+}
 
 // Sass knows that every element matching "main.content" also matches ".content"
 // and avoids generating unnecessary interleaved selectors.
-// main.content .info {
-//   font-size: 0.8em;
-// }
+main.content .info {
+  font-size: 0.8em;
+}
 .content {
   nav.sidebar {
     padding-right: 20px;
-    @extend .info;
+    @extend .info; 
   }
 }
-

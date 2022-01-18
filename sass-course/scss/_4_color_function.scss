@@ -2,28 +2,28 @@
 $my-color: rgb(51, 190, 114);
 
 .my-color{
-  color : $my-color
+  color : $my-color;
 }
 .my-color-1{
   color : adjust-color($my-color, $blue: 10)
 }
 .my-color-2{
-  color : adjust-color($my-color, $blue: -10)
+  color : adjust-color($my-color, $blue: -10);
 }
 .my-color-3{
-  color : adjust-color($my-color, $blue: -10, $red: 20)
+  color : adjust-color($my-color, $blue: -10, $red: 20);
 }
 .my-color-4{
-  color : adjust-color($my-color, $blue: -10, $red: 20, $alpha: -0.4)
+  color : adjust-color($my-color, $blue: -10, $red: 20, $alpha: -0.4);
 }
 .my-color-5{
-  color : adjust-color($my-color, $lightness: -20%)
+  color : adjust-color($my-color, $lightness: -20%);
 }
 .my-color-6{
-  color : adjust-hue($my-color, -20deg)
+  color : adjust-hue($my-color, -20deg);
 }
 .my-color-7{
-  color : change-color($my-color, $blue: 30, $green: 100)  
+  color : change-color($my-color, $blue: 30, $green: 100, $alpha: .3) ;
 }
 .my-color-8{
   color : scale-color($my-color, $blue: 10%) 

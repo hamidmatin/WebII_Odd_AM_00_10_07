@@ -5,7 +5,7 @@
 
 .class1 {
   padding: 8px;
-  @include rounded(6px);
+  @include rounded(4px);
 }
 
 .class2 {
@@ -13,34 +13,53 @@
   @include rounded(50%);
 }
 
-// default value
-@mixin mixin1($padding: 0.5em, $color: $blue) {
+@mixin mixin1($padding, $color) {
   padding: $padding;
   color: $color;
 }
 
 .class3 {
   font-size: 18px;
-  @include mixin1();
+  @include mixin1(.5em, $red);
+}
+
+.class3-1 {
+  font-size: 18px;
+  @include mixin1($color: blue, $padding: 20px)
+}
+
+.class3-2 {
+  font-size: 18px;
+  @include mixin1($padding: 20px, $color: yellow)
+}
+
+// default value
+@mixin mixin2($padding: .5em, $color: $blue) {
+  padding: $padding;
+  color: $color;
 }
 
 .class4 {
   background-color: yellow;
-  @include mixin1(30px, rgb(34, 175, 185));
+  @include mixin2(30px, rgb(34, 175, 185));
 }
 
 .class5 {
   background-color: rgb(238, 105, 227);
-  @include mixin1(20px);
+  @include mixin2(20px);
 }
 
 .class6 {
   background-color: rgb(238, 105, 227);
-  @include mixin1($color: red);
+  @include mixin2($color: red);
 }
 .class7 {
   background-color: rgb(238, 105, 227);
-  @include mixin1($color: red, $padding: 30px);
+  @include mixin2($color: red, $padding: 30px);
+}
+.class8 {
+  background-color: rgb(238, 105, 227);
+  @include mixin2();
 }
 
 /******** sample ***/
@@ -62,13 +81,13 @@
   display: inline-block;
   border: none;
   padding: 0.5em 1em;
-  transition: all 0.3s;
+  transition: all 0.1s;
   @include rounded(4px);
   &.btn-primary {
-    @include button-color($blue, white);
+    @include button-color($bg-color: $blue, $color: white);
   }
   &.btn-danger {
-    @include button-color(red, white);
+    @include button-color($bg-color: red, $color: white);
   }
   &.btn-warning {
     @include button-color(rgb(231, 210, 20), white);

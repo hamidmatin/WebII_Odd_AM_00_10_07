@@ -1,7 +1,6 @@
 /* Start SCSS Modules*/
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 /*End of SCSS Modules*/
@@ -42,27 +41,27 @@ h4 {
   decendant selector
   selector1{
     selector2{
-                        
+
     }
   }
-  
+
   child selector
   selector1{
     > selector2{
-                        
+
     }
   }
 
   sibling selector
   selector1{
     + selector2{
-                        
+
     }
   }
   sibling selector
   selector1{
     ~ selector2{
-                        
+
     }
   }
 
@@ -70,7 +69,7 @@ h4 {
 
   selector1{
     & + &{
-                        
+
     }
     &:hover{
     }
@@ -80,13 +79,11 @@ h4 {
   height: 60px;
   background-color: #f1f1f1;
 }
-
 .nav ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
-
 .nav ul a {
   display: block;
   text-decoration: none;
@@ -95,12 +92,10 @@ h4 {
   line-height: 60px;
   padding: 0 16px;
 }
-
 .nav ul a:hover {
   background-color: #ca1d1d;
   color: #f1f1f1;
 }
-
 .nav > ul > li {
   float: left;
 }
@@ -112,7 +107,6 @@ h2 + p {
 p ~ span {
   opacity: 0.8;
 }
-
 p ~ a {
   color: gainsboro;
 }
@@ -121,7 +115,6 @@ p ~ a {
 p ~ span {
   opacity: 0.8;
 }
-
 p ~ a {
   color: gainsboro;
 }
@@ -129,7 +122,6 @@ p ~ a {
 .card-link {
   background-color: #fff;
 }
-
 .card-link + .card-link {
   margin-left: 10px;
 }
@@ -180,13 +172,12 @@ p ~ a {
 }
 
 /******** Placeholders **********/
-.btn, .card, .alert {
+.alert, .card, .btn {
   border-radius: 6px;
 }
 
-.shadow, .card, .alert {
-  -webkit-box-shadow: 0 2px 4px 2px rgba(0, 0, 0, 0.445);
-          box-shadow: 0 2px 4px 2px rgba(0, 0, 0, 0.445);
+.shadow, .alert, .card {
+  box-shadow: 0 2px 4px 2px rgba(0, 0, 0, 0.445);
 }
 
 .btn {
@@ -203,20 +194,17 @@ p ~ a {
 }
 
 /******************/
-.action-buttons, .reset-buttons, .cancel-button {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+.cancel-button, .reset-buttons, .action-buttons {
+  box-sizing: border-box;
   border-top: 1px rgba(36, 98, 233, 0.12) solid;
   padding: 16px 0;
   width: 100%;
   display: inline-block;
 }
-
-.action-buttons:hover, .reset-buttons:hover, .cancel-button:hover {
+.cancel-button:hover, .reset-buttons:hover, .action-buttons:hover {
   border: 2px rgba(36, 98, 233, 0.5) solid;
 }
-
-.action-buttons + .action-buttons, .reset-buttons + .action-buttons, .cancel-button + .action-buttons, .action-buttons + .reset-buttons, .reset-buttons + .reset-buttons, .cancel-button + .reset-buttons, .action-buttons + .cancel-button, .reset-buttons + .cancel-button, .cancel-button + .cancel-button {
+.cancel-button + .cancel-button, .reset-buttons + .cancel-button, .cancel-button + .reset-buttons, .reset-buttons + .reset-buttons, .action-buttons + .cancel-button, .action-buttons + .reset-buttons, .cancel-button + .action-buttons, .reset-buttons + .action-buttons, .action-buttons + .action-buttons {
   margin-left: 10px;
 }
 
@@ -244,7 +232,7 @@ p ~ a {
 }
 
 div, .my-info {
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
 }
 
 .my-info {
@@ -334,63 +322,44 @@ main.content .info, main.content nav.sidebar {
   display: inline-block;
   border: none;
   padding: 0.5em 1em;
-  -webkit-transition: all 0.1s;
   transition: all 0.1s;
   border-radius: 4px;
 }
-
 .btn.btn-primary {
   background-color: #2462e9;
   color: white;
 }
-
 .btn.btn-primary:hover {
   background-color: #144cc6;
-  -webkit-box-shadow: 0 0 2px 2px rgba(36, 98, 233, 0.7);
-          box-shadow: 0 0 2px 2px rgba(36, 98, 233, 0.7);
+  box-shadow: 0 0 2px 2px rgba(36, 98, 233, 0.7);
 }
-
 .btn.btn-primary:active {
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  -webkit-transform: translate(-2px, -2px);
-          transform: translate(-2px, -2px);
+  box-shadow: none;
+  transform: translate(-2px, -2px);
 }
-
 .btn.btn-danger {
   background-color: red;
   color: white;
 }
-
 .btn.btn-danger:hover {
   background-color: #cc0000;
-  -webkit-box-shadow: 0 0 2px 2px rgba(255, 0, 0, 0.7);
-          box-shadow: 0 0 2px 2px rgba(255, 0, 0, 0.7);
+  box-shadow: 0 0 2px 2px rgba(255, 0, 0, 0.7);
 }
-
 .btn.btn-danger:active {
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  -webkit-transform: translate(-2px, -2px);
-          transform: translate(-2px, -2px);
+  box-shadow: none;
+  transform: translate(-2px, -2px);
 }
-
 .btn.btn-warning {
   background-color: #e7d214;
   color: white;
 }
-
 .btn.btn-warning:hover {
   background-color: #b8a710;
-  -webkit-box-shadow: 0 0 2px 2px rgba(231, 210, 20, 0.7);
-          box-shadow: 0 0 2px 2px rgba(231, 210, 20, 0.7);
+  box-shadow: 0 0 2px 2px rgba(231, 210, 20, 0.7);
 }
-
 .btn.btn-warning:active {
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  -webkit-transform: translate(-2px, -2px);
-          transform: translate(-2px, -2px);
+  box-shadow: none;
+  transform: translate(-2px, -2px);
 }
 
 /*********** Functions *************/
@@ -399,7 +368,6 @@ main.content .info, main.content nav.sidebar {
   color: red;
   border: 2px solid #ff274d;
 }
-
 .btn-primary-2:hover {
   background-color: #ff8da1;
   border: 2px solid #f3002a;
@@ -410,7 +378,6 @@ main.content .info, main.content nav.sidebar {
   color: white;
   border: 2px solid #a2a2a2;
 }
-
 .btn-dark-2:hover {
   background-color: #6f6f6f;
   border: 2px solid #bbbbbb;
@@ -426,7 +393,6 @@ main.content .info, main.content nav.sidebar {
 .link {
   background-color: blue;
 }
-
 .link:hover {
   background-color: yellow;
 }
@@ -454,86 +420,4 @@ header {
   padding: 1em;
 }
 
-/********** Loops ************/
-/********** for - to ************/
-.class-to-1 {
-  padding: 2px;
-}
-
-.class-to-2 {
-  padding: 4px;
-}
-
-.class-to-3 {
-  padding: 6px;
-}
-
-/********** for through ************/
-.class-through-1 {
-  padding: 2px;
-}
-
-.class-through-2 {
-  padding: 4px;
-}
-
-.class-through-3 {
-  padding: 6px;
-}
-
-.class-through-4 {
-  padding: 8px;
-}
-
-/**************/
-.col-1 {
-  width: 8.33333%;
-}
-
-.col-2 {
-  width: 16.66667%;
-}
-
-.col-3 {
-  width: 25%;
-}
-
-.col-4 {
-  width: 33.33333%;
-}
-
-.col-5 {
-  width: 41.66667%;
-}
-
-.col-6 {
-  width: 50%;
-}
-
-.col-7 {
-  width: 58.33333%;
-}
-
-.col-8 {
-  width: 66.66667%;
-}
-
-.col-9 {
-  width: 75%;
-}
-
-.col-10 {
-  width: 83.33333%;
-}
-
-.col-11 {
-  width: 91.66667%;
-}
-
-.col-12 {
-  width: 100%;
-}
-
-/************ while *********/
-/******** @each **********/
 /*# sourceMappingURL=style.css.map */
