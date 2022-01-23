@@ -13,7 +13,7 @@
   }
 }
 /**************/
-$col-count: 12;
+$col-count: 4;
 
 @for $i from 1 through $col-count {
   .col-#{$i}{
@@ -23,40 +23,44 @@ $col-count: 12;
 }
 
 /************ while *********/
-/// Divides `$value` by `$ratio` until it's below `$base`.
-// @function scale-below($value, $base, $ratio: 1.618) {
-//   @while $value > $base {
-//     // $value: math.div($value, $ratio);
-//     $value: $value / $ratio;
-//     @debug $value;
-//   }
-//   @return $value;
+// @while condition {
+//   body of loop (while condition == true)
 // }
+
+// Divides `$value` by `$ratio` until it's below `$base`.
+@function scale-below($value, $base, $ratio: 1.618) {
+  @while $value > $base {
+    // $value: math.div($value, $ratio);
+    $value: $value / $ratio;
+    @debug $value;
+  }
+  @return $value;
+}
 
 // $normal-font-size: 16px;
 sup {
-  // font-size: scale-below(20px, 16px, 1.0002);
+  font-size: scale-below(20px, 16px, 1.2);
 }
 
 /******** @each **********/
 // $sizes: [40px 50px 80px 100px];
 // $sizes: 40px, 50px, 80px, 100px, 20px;
-// $sizes: 40px 50px 80px 100px 10px 60px;
+$sizes: 40px 50px 80px 100px 10px 60px;
 
 // @each $variable in $list { .... }
-// @each $size in $sizes {
-//   .icon-#{$size} {
-//     font-size: $size;
-//     height: $size;
-//     width: $size;
-//   }
-// }
+@each $size in $sizes {
+  .icon-#{$size} {
+    font-size: $size;
+    height: $size;
+    width: $size;
+  }
+}
 
-// $medias: sm md lg xl;
-// @each $media in $medias {
-//   @for $i from 1 through $col-count {
-//     .col-#{$media}-#{$i}{
-//       width: (100% / $col-count) * $i;
-//     }
-//   }
-// }
+$medias: sm md lg xl;
+@each $media in $medias {
+  @for $i from 1 through $col-count {
+    .col-#{$media}-#{$i}{
+      width: (100% / $col-count) * $i;
+    }
+  }
+}

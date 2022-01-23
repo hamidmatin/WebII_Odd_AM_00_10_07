@@ -1,11 +1,42 @@
-// @mixin my-mixin-2($color, $bg-color) {
-//   color: $color;
-//   background-color: $bg-color;
-//   @content;
-// }
+/****** @content in mixin ***********/
 
-// .my-class-2{
-//   @include my-mixin-2($color: red, $bg-color: green){
-//     padding: 20px;
+@mixin my-mixin-2($color, $bg-color) {
+  color: $color;
+  background-color: $bg-color;
+  @content;
+}
+
+.my-class-2 {
+  @include my-mixin-2($color: red, $bg-color: green);
+}
+.my-class-3 {
+  @include my-mixin-2($color: red, $bg-color: green) {
+    padding: 20px;
+  }
+}
+
+// @mixin media {
+//   @each $media, $size in $medias-map {
+//     @media screen and (min-width: $size) {
+//       @content($media);
+//     }
 //   }
 // }
+
+// @include media() using ($media) {
+//   @for $i from 1 through $col-count {
+//     .col-#{$media}-#{$i}{ 
+//       width: (100% / $col-count) * $i; 
+//     }
+//   }
+// }
+
+// @include media() using ($media) {
+//   @each $align in $text-aligns {
+//     .text-#{$media}-#{$align}{
+//       text-align: $align !important;
+//     }
+//   }
+// }
+
+
