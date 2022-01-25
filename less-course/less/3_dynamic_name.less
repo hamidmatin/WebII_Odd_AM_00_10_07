@@ -1,0 +1,56 @@
+/******** dynamic_name ******/
+@selector: primary;
+@property: color;
+
+@images-folder: '/images';
+
+.btn-@{selector}{
+  @{property}: @primary-color;
+}
+
+.alert-@{selector}{
+  background-@{property}: @primary-color;
+  &::after{
+    content: url('@{images-folder}/icon.png');
+  }
+}
+
+
+// @images-folder: "/pics";
+.icon{
+  @images-folder: "/pics";
+  @image-name: "bgdesert.jpg";
+  background-image: url("@{images-folder}/@{image-name}");
+}
+
+.icon2 {
+  @image-name: "new-icon.jpg";
+  background-image: url("@{images-folder}/@{image-name}");
+}
+@primary:  green;
+@secondary: blue;
+
+.section {
+  @color: secondary;
+
+  // color: @color;
+
+  color: @@color;
+}
+
+.btn1{
+  padding: 20px;
+
+  @color: dodgerblue;
+  
+  color: @color;
+  border: 2px solid @color;
+  box-shadow: 0 4px 2px @color;
+}
+
+.btn2{
+  padding: 20px;
+  color: dodgerblue;
+  border:($padding / 10) solid $color;
+  
+}
